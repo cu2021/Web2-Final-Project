@@ -91,7 +91,7 @@ include "partial/header.php";
                                                                                         while ($product_file_row = mysqli_fetch_assoc($result2)) {
                                                                                             echo "<img src='uploads/images/" . $product_file_row['image'] . "' width='100px' height='100px'/>";
                                                                                         }
-                                                                                        echo "</td> <td>" . $row['name'] . "</td>";
+                                                                                        echo "</td> <td>" . $row['qty'] . "</td>";
 
                                                                                         echo "<td>
                                                                                             <a href='update_product.php?id=" . $row['id'] . "' 

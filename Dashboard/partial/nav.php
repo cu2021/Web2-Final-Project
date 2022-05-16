@@ -1,3 +1,8 @@
+<?php
+$user = $_SESSION['name'];
+// $user = $_COOKIE['name'];
+?>
+
 <nav class="header-navbar navbar-expand-md navbar navbar-with-menu navbar-without-dd-arrow fixed-top navbar-semi-dark navbar-shadow">
     <div class="navbar-wrapper">
         <div class="navbar-header">
@@ -155,7 +160,7 @@
                     <li class="dropdown dropdown-user nav-item">
                         <a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
                             <span class="mr-1">Hello,
-                                <span class="user-name text-bold-700">John Doe</span>
+                                <span class="user-name text-bold-700"><?php echo strtoupper($user)  ?></span>
                             </span>
                             <span class="avatar avatar-online">
                                 <img src="app-assets/images/portrait/small/avatar-s-19.png" alt="avatar"><i></i></span>
@@ -165,7 +170,7 @@
                             <a class="dropdown-item" href="#"><i class="ft-mail"></i> My Inbox</a>
                             <a class="dropdown-item" href="#"><i class="ft-check-square"></i> Task</a>
                             <a class="dropdown-item" href="#"><i class="ft-message-square"></i> Chats</a>
-                            <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i class="ft-power"></i> Logout</a>
+                            <div class="dropdown-divider"></div><a class="dropdown-item" href="logout.php"><i class="ft-power"></i> Logout</a>
                         </div>
                     </li>
                     <li class="dropdown dropdown-language nav-item"><a class="dropdown-toggle nav-link" id="dropdown-flag" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="flag-icon flag-icon-gb"></i><span class="selected-language"></span></a>

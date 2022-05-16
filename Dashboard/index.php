@@ -1,3 +1,16 @@
+<?php
+session_start();
+if (!isset($_SESSION['is_login']) && !$_SESSION['is_login']) {
+  header('Location:login.php');
+}
+?>
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="ltr">
 
@@ -7,8 +20,8 @@ include "partial/header.php";
 
 <body class="vertical-layout vertical-menu-modern 2-columns   menu-expanded fixed-navbar" data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
   <!-- fixed-top-->
- <?php include "partial/nav.php"?>
- <?php include "partial/sidebar.php"?>
+  <?php include "partial/nav.php" ?>
+  <?php include "partial/sidebar.php" ?>
   <!-- ////////////////////////////////////////////////////////////////////////////-->
 
   <div class="app-content content">
@@ -249,8 +262,7 @@ include "partial/header.php";
                 <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
                 <div class="heading-elements">
                   <ul class="list-inline mb-0">
-                    <li><a class="btn btn-sm btn-danger box-shadow-2 round btn-min-width pull-right"
-                           href="invoice-summary.html" target="_blank">View all</a></li>
+                    <li><a class="btn btn-sm btn-danger box-shadow-2 round btn-min-width pull-right" href="invoice-summary.html" target="_blank">View all</a></li>
                   </ul>
                 </div>
               </div>
